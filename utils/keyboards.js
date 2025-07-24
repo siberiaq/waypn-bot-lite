@@ -60,7 +60,7 @@ function getSetupKeyboard() {
     return {
         inline_keyboard: [
             [
-                { text: "⚙️ Перейти к настройке", callback_data: "vpn_setup" }
+                { text: "⚙️ Настроить VPN", callback_data: "setup_manual" }
             ],
             [
                 { text: "🔙 Назад", callback_data: "back_to_main" }
@@ -76,8 +76,7 @@ function getVpnSetupDialogKeyboard() {
     return {
         inline_keyboard: [
             [
-                { text: "🤖 Помощник", callback_data: "setup_assistant" },
-                { text: "⚙️ Настроить вручную", callback_data: "setup_manual" }
+                { text: "⚙️ Настроить VPN", callback_data: "setup_manual" }
             ],
             [
                 { text: "🔙 Назад", callback_data: "back_to_main" }
