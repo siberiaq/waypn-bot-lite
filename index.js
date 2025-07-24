@@ -66,7 +66,9 @@ async function showMainMenu(chatId, messageId = null) {
                         {
                             text: '👑 Оплатить доступ',
                             url: 'https://t.me/tribute/app?startapp=sy4h'
-                        },
+                        }
+                    ],
+                    [   
                         {
                             text: '⚙️ Настроить VPN',
                             callback_data: 'vpn_setup'
@@ -76,7 +78,9 @@ async function showMainMenu(chatId, messageId = null) {
                         {
                             text: '💁🏼‍♀️ Поддержка',
                             callback_data: 'support'
-                        },
+                        }
+                    ],
+                    [
                         {
                             text: '👤 Профиль',
                             callback_data: 'profile'
