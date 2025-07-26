@@ -25,7 +25,7 @@ function getUserConfig(telegramUserId) {
     } else {
         console.log(`⚠️ Конфигурация не найдена для пользователя ${telegramUserId}`);
         // Возвращаем заглушку для демонстрации
-        return "vless://46de4c61-00c7-4cf7-8790-b3113205e1dd@waypn.com:443?type=tcp&security=reality&pbk=KKPXarv8v8jFdfZGxqa3pFg6N0YLrLStCGkhGhoQfzg&fp=random&sni=nu.nl&sid=5a8d7361945cf53c&spx=%2F&flow=xtls-rprx-vision#waypn.com-example";
+        return "Пользователь не найден￼";
     }
 }
 
