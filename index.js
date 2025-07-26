@@ -27,16 +27,23 @@ const XuiAPI = require('./utils/xui-api');
 
 // Инициализация API для работы с 3xui
 const xuiApi = new XuiAPI({
-    baseUrl: process.env.XUI_BASE_URL || 'https://waypn.com:2053/waypn-settings/',
-    email: process.env.XUI_EMAIL || 'admin',
-    password: process.env.XUI_PASSWORD || 'z4C9wQ8he4875T6d'
+    baseUrl: process.env.XUI_BASE_URL,
+    email: process.env.XUI_EMAIL,
+    password: process.env.XUI_PASSWORD
 });
+
+// Проверяем наличие обязательных переменных окружения
+if (!process.env.XUI_BASE_URL || !process.env.XUI_EMAIL || !process.env.XUI_PASSWORD) {
+    console.error('❌ Ошибка: Не заданы обязательные переменные окружения для 3xui API');
+    console.error('   XUI_BASE_URL, XUI_EMAIL, XUI_PASSWORD должны быть указаны в файле .env');
+    process.exit(1);
+}
 
 // Логируем конфигурацию 3xui
 console.log('🔧 3XUI Configuration:');
-console.log(`   Base URL: ${process.env.XUI_BASE_URL || 'https://waypn.com:2053/waypn-settings/'}`);
-console.log(`   Email: ${process.env.XUI_EMAIL || 'admin'}`);
-console.log(`   Password: ${process.env.XUI_PASSWORD ? '***' : 'z4C9wQ8he4875T6d (default)'}`);
+console.log(`   Base URL: ${process.env.XUI_BASE_URL}`);
+console.log(`   Email: ${process.env.XUI_EMAIL}`);
+console.log(`   Password: ***`);
 
 // Инициализация бота с токеном из переменных окружения
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
