@@ -71,7 +71,7 @@ async function showMainMenu(chatId, messageId = null) {
                     [   
                         {
                             text: '⚙️ Настроить VPN',
-                            callback_data: 'vpn_setup'
+                            callback_data: 'setup_manual'
                         }
                     ],
                     [
