@@ -92,7 +92,7 @@ function getManualSetupKeyboard() {
     return {
         inline_keyboard: [
             [
-                { text: "🔙 Назад", callback_data: "vpn_setup" }
+                { text: "🔙 Назад", callback_data: "back_to_main" }
             ]
         ]
     };
@@ -108,7 +108,7 @@ function getAssistantUnavailableKeyboard() {
                 { text: "💳 Вступить в канал", url: "https://t.me/tribute/app?startapp=sy4h" }
             ],
             [
-                { text: "🔙 Назад", callback_data: "vpn_setup" }
+                { text: "🔙 Назад", callback_data: "back_to_main" }
             ]
         ]
     };
