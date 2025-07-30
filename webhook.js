@@ -17,7 +17,7 @@ const { getSetupKeyboard } = require('./utils/keyboards');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Проверяем наличие обязательных переменных окружения
 if (!process.env.XUI_BASE_URL || !process.env.XUI_EMAIL || !process.env.XUI_PASSWORD) {
