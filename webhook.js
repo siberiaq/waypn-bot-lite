@@ -70,29 +70,46 @@ async function getUserInfo(telegramUserId) {
     }
 }
 
-// Настройка middleware для парсинга JSON
+// Настройка middleware для парсинга JSON с улучшенной обработкой ошибок
 app.use(bodyParser.json({
+    limit: '10mb',
     verify: (req, res, buf) => {
         try {
-            JSON.parse(buf);
+            const jsonString = buf.toString();
+            console.log('📨 Получены данные:', jsonString.substring(0, 200) + '...');
+            JSON.parse(jsonString);
         } catch (e) {
             console.error('❌ Ошибка парсинга JSON:', e.message);
+            console.error('❌ Полученные данные:', buf.toString());
+            
             // Попытка исправить обрезанный JSON
-            const fixedBuf = Buffer.concat([buf, Buffer.from('}')]);
             try {
-                JSON.parse(fixedBuf);
-                console.log('✅ JSON исправлен');
+                const fixedString = buf.toString() + '}';
+                JSON.parse(fixedString);
+                console.log('✅ JSON исправлен автоматически');
             } catch (e2) {
-                console.error('❌ Не удалось исправить JSON');
+                console.error('❌ Не удалось исправить JSON:', e2.message);
             }
         }
     }
 }));
 
+// Middleware для логирования запросов
+app.use((req, res, next) => {
+    console.log(`📥 ${req.method} ${req.path} - ${new Date().toISOString()}`);
+    console.log(`📋 Headers:`, JSON.stringify(req.headers, null, 2));
+    next();
+});
+
 // Глобальный обработчик ошибок
 app.use((error, req, res, next) => {
     console.error('❌ Ошибка в middleware:', error.message);
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error('❌ Stack trace:', error.stack);
+    res.status(500).json({ 
+        error: 'Internal Server Error',
+        message: error.message,
+        timestamp: new Date().toISOString()
+    });
 });
 
 // Эндпоинт для проверки здоровья сервера
@@ -107,6 +124,10 @@ app.get('/health', (req, res) => {
 // Эндпоинт для получения вебхуков от Tribute
 app.post('/webhook/tribute', async (req, res) => {
     try {
+        console.log('🎯 Начало обработки вебхука от Tribute');
+        console.log('📋 Content-Type:', req.headers['content-type']);
+        console.log('📋 Content-Length:', req.headers['content-length']);
+        
         const webhookData = req.body;
         
         console.log('📨 Получен вебхук от Tribute:', JSON.stringify(webhookData, null, 2));
