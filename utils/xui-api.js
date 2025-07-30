@@ -378,7 +378,7 @@ class XuiAPI {
     /**
      * Создание или обновление VPN пользователя на основе данных из Tribute
      */
-    async createVpnUser(telegramUserId, expiresAt, subscriptionData) {
+    async createVpnUser(telegramUserId, expiresAt, subscriptionData, username = null) {
         try {
             console.log(`🚀 Обработка VPN пользователя для ${telegramUserId}...`);
 
@@ -389,7 +389,7 @@ class XuiAPI {
                 console.log(`🔄 Пользователь ${telegramUserId} уже существует. Обновляем подписку...`);
                 
                 // Обновляем подписку существующего пользователя
-                const updateResult = await this.updateUserSubscription(existingUser, expiresAt, subscriptionData);
+                const updateResult = await this.updateUserSubscription(existingUser, expiresAt, subscriptionData, username);
                 
                 if (updateResult) {
                     console.log(`✅ Подписка пользователя ${telegramUserId} обновлена`);
@@ -457,6 +457,12 @@ class XuiAPI {
                 subId: `sub_${subscriptionData.subscription_id}`,
                 reset: 0
             };
+
+            // Добавляем comment с username, если он передан
+            if (username) {
+                userData.comment = `@${username}`;
+                console.log(`📝 Добавлен comment: @${username}`);
+            }
 
             // Создаем пользователя
             const result = await this.createUser(inbound.id, userData);
@@ -621,7 +627,7 @@ class XuiAPI {
     /**
      * Обновление подписки существующего пользователя
      */
-    async updateUserSubscription(userInfo, newExpiresAt, subscriptionData) {
+    async updateUserSubscription(userInfo, newExpiresAt, subscriptionData, username = null) {
         try {
             if (!this.session) {
                 const loggedIn = await this.login();
@@ -682,6 +688,12 @@ class XuiAPI {
             settings.clients[userIndex].expiryTime = finalExpiryTime;
             settings.clients[userIndex].subId = `sub_${subscriptionData.subscription_id}`;
             settings.clients[userIndex].enable = true; // Активируем пользователя
+
+            // Обновляем comment с username, если он передан
+            if (username) {
+                settings.clients[userIndex].comment = `@${username}`;
+                console.log(`📝 Обновлен comment: @${username}`);
+            }
 
             // Обновляем settings в inbound
             inbound.settings = JSON.stringify(settings, null, 2);

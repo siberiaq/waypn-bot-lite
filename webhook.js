@@ -42,6 +42,34 @@ console.log(`   Base URL: ${process.env.XUI_BASE_URL}`);
 console.log(`   Email: ${process.env.XUI_EMAIL}`);
 console.log(`   Password: ***`);
 
+/**
+ * Получение информации о пользователе из Telegram
+ */
+async function getUserInfo(telegramUserId) {
+    try {
+        console.log(`🔍 Получение информации о пользователе ${telegramUserId} из Telegram...`);
+        
+        // Пытаемся получить информацию о пользователе
+        const userInfo = await bot.getChat(telegramUserId);
+        
+        if (userInfo) {
+            console.log(`✅ Информация о пользователе получена:`, {
+                id: userInfo.id,
+                username: userInfo.username,
+                first_name: userInfo.first_name,
+                last_name: userInfo.last_name
+            });
+            return userInfo;
+        } else {
+            console.log(`⚠️ Не удалось получить информацию о пользователе ${telegramUserId}`);
+            return null;
+        }
+    } catch (error) {
+        console.error(`❌ Ошибка получения информации о пользователе ${telegramUserId}:`, error.message);
+        return null;
+    }
+}
+
 // Настройка middleware для парсинга JSON
 app.use(bodyParser.json({
     verify: (req, res, buf) => {
@@ -96,10 +124,15 @@ app.post('/webhook/tribute', async (req, res) => {
             
             // Создаем VPN пользователя в 3xui
             console.log('🚀 Создание VPN пользователя...');
+            
+            // Получаем информацию о пользователе из Telegram
+            const userInfo = await getUserInfo(telegramUserId);
+            const username = userInfo ? userInfo.username : null;
+            
             const vpnUser = await xui.createVpnUser(telegramUserId, expiresAt, {
                 subscription_id: payload.subscription_id,
                 period: payload.period
-            });
+            }, username);
             
             if (vpnUser) {
                 if (vpnUser.action === 'created') {
