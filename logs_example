@@ -1,0 +1,86 @@
+ ✅ Сообщение с изображением об успешной оплате отправлено пользователю 138710043
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1] 📋 Кнопки в сообщении: { inline_keyboard: [ [ [Object] ], [ [Object] ] ] }
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1] 📨 Результат отправки: 9
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1] 📨 Полный результат: {
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]   "message_id": 9,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]   "from": {
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     "id": 8383082096,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     "is_bot": true,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     "first_name": "WAYPN - VPN Bot 🚀",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     "username": "saludovpnbot"
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]   },
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]   "chat": {
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     "id": 138710043,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     "first_name": "Alexander",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     "last_name": "Borodin",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     "username": "siberiaq",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     "type": "private"
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]   },
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]   "date": 1753306954,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]   "photo": [
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     {
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_id": "AgACAgQAAxkDAAMDaIFNmJeJNUCW0L3bBObCZa8C20AAAn-5MRtWdAxQ0wZYj-5hoWoBAAMCAANzAAM2BA",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_unique_id": "AQADf7kxG1Z0DFB4",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_size": 1429,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "width": 90,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "height": 90
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     },
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     {
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_id": "AgACAgQAAxkDAAMDaIFNmJeJNUCW0L3bBObCZa8C20AAAn-5MRtWdAxQ0wZYj-5hoWoBAAMCAANtAAM2BA",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_unique_id": "AQADf7kxG1Z0DFBy",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_size": 16267,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "width": 320,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "height": 320
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     },
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     {
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_id": "AgACAgQAAxkDAAMDaIFNmJeJNUCW0L3bBObCZa8C20AAAn-5MRtWdAxQ0wZYj-5hoWoBAAMCAAN4AAM2BA",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_unique_id": "AQADf7kxG1Z0DFB9",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_size": 55200,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "width": 800,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "height": 800
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     },
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     {
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_id": "AgACAgQAAxkDAAMDaIFNmJeJNUCW0L3bBObCZa8C20AAAn-5MRtWdAxQ0wZYj-5hoWoBAAMCAAN5AAM2BA",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_unique_id": "AQADf7kxG1Z0DFB-",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_size": 108768,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "width": 1280,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "height": 1280
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     },
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     {
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_id": "AgACAgQAAxkDAAMDaIFNmJeJNUCW0L3bBObCZa8C20AAAn-5MRtWdAxQ0wZYj-5hoWoBAAMCAAN3AAM2BA",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_unique_id": "AQADf7kxG1Z0DFB8",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "file_size": 183574,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "width": 1709,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "height": 1709
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     }
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]   ],
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]   "caption": "🎉 Оплата прошла успешно!\n\n💰 Сумма: 699 rub\n📅 Срок подписки: halfyearly\n⏰ Дата следующего списания: 24.01.2026\n\n🎉 Оплата прошла успешно!\n\nТеперь ты можешь перейти к настройке VPN на своем устройстве.",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]   "caption_entities": [
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     {
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "offset": 3,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "length": 22,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "type": "bold"
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     },
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     {
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "offset": 117,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "length": 22,
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       "type": "bold"
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     }
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]   ],
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]   "reply_markup": {
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     "inline_keyboard": [
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       [
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]         {
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]           "text": "⚙️ Перейти к настройке",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]           "callback_data": "vpn_setup"
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]         }
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       ],
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       [
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]         {
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]           "text": "🔙 Назад",
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]           "callback_data": "back_to_main"
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]         }
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]       ]
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]     ]
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1]   }
+Jul 24 00:42:34 v68093.hosted-by-vdsina.com npm[331683]: [1] }

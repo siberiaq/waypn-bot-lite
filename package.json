@@ -9,7 +9,8 @@
     "dev": "nodemon index.js",
     "dev:webhook": "nodemon webhook.js",
     "test:webhook": "node test-webhook.js",
-    "start:all": "concurrently \"npm run start\" \"npm run webhook\"",
+    "start:bot": "node index.js",
+    "start:webhook": "node webhook.js",
     "start:prod": "./start.sh",
     "dev:all": "concurrently \"npm run dev\" \"npm run dev:webhook\""
   },

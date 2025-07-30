@@ -19,16 +19,28 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Инициализация Telegram бота
+// Проверяем наличие обязательных переменных окружения
+if (!process.env.XUI_BASE_URL || !process.env.XUI_EMAIL || !process.env.XUI_PASSWORD) {
+    console.error('❌ Ошибка: Не заданы обязательные переменные окружения для 3xui API');
+    console.error('   XUI_BASE_URL, XUI_EMAIL, XUI_PASSWORD должны быть указаны в файле .env');
+    process.exit(1);
+}
+
+// Инициализация Telegram бота только для отправки сообщений (без polling)
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: false });
 
-// Инициализация 3xui API
+// Инициализация 3xui API с переменными окружения
 const xuiConfig = {
-    baseUrl: 'https://waypn.com:2053/waypn-settings/',
-    email: 'admin',
-    password: 'z4C9wQ8he4875T6d'
+    baseUrl: process.env.XUI_BASE_URL,
+    email: process.env.XUI_EMAIL,
+    password: process.env.XUI_PASSWORD
 };
 const xui = new XuiAPI(xuiConfig);
+
+console.log('🔧 Webhook 3XUI Configuration:');
+console.log(`   Base URL: ${process.env.XUI_BASE_URL}`);
+console.log(`   Email: ${process.env.XUI_EMAIL}`);
+console.log(`   Password: ***`);
 
 // Настройка middleware для парсинга JSON
 app.use(bodyParser.json({
